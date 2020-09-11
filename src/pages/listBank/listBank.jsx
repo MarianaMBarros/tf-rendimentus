@@ -34,7 +34,6 @@ function ListBank() {
   }, []);
 
   function handleDetail(id) {
-    console.log(id);
     history.push(`/menuBank/${id}`);
   }
 
@@ -49,7 +48,7 @@ function ListBank() {
       <div className="list-card-bank">
         <div className="message">
           <OfferMessage />
-          </div>
+        </div>
         <ul>
           {banks.map(item => (
             <ItemBank

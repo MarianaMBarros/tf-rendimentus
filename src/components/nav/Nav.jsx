@@ -25,18 +25,18 @@ const Nav = () => {
             <Link to="/offers">
               <button type="submit" className="pages">Créditos</button>
             </Link>
-            <Link to="/offers">
+            <Link to="/contract">
               <button type="submit" className="pages">Contratos</button>
             </Link>
-            <Link to="/login">
+            <Link to="/">
               <button type="submit" className="pages">Sair</button>
             </Link>
           </div>
         )}
-        </div>
-        <div className="listener2">
-          <Image src={logo} alt="logo-nav" class="logo-nav" />
-        </div>
+      </div>
+      <div className="listener2">
+        <Image src={logo} alt="logo-nav" class="logo-nav" />
+      </div>
     </nav>
   );
 };

@@ -26,10 +26,6 @@ function MenuBank() {
       });
   }, [id]);
 
-  function handleMenuBank() {
-    history.push(`/extract/${id}`);
-  }
-
   if (!sac) {
     return null;
   }
@@ -49,7 +45,7 @@ function MenuBank() {
             name="CRÉDITOS"
             item="Contratos"
             className="submit"
-            onClick={handleMenuBank}
+            onClick={() => history.push(`/extract/${id}`)}
           />
         </div>
         <div>
@@ -58,7 +54,6 @@ function MenuBank() {
             name="CARTÕES"
             item="Fatura"
             className="submit"
-            onClick={handleMenuBank}
           />
         </div>
         <div>
@@ -67,7 +62,7 @@ function MenuBank() {
             name="CONTRATAÇÕES"
             item="Consultar"
             className="submit"
-            onClick={handleMenuBank}
+            onClick={() => history.push(`/contract`)}
           />
         </div>
         <div>
@@ -76,7 +71,6 @@ function MenuBank() {
             name="OUTROS CARTÕES"
             item="Bandeiras"
             className="submit"
-            onClick={handleMenuBank}
           />
         </div>
       </section>

@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './style.css'
-
-
 
 const Card_product = ({ numBank, nameBank, rate, value, maxInstallments, onClick }) => (
 

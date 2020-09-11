@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Card_product from '../../components/card_product'
 import Header from '../../components/header/Header'
+import { useHistory } from "react-router-dom";
 
 function Offers() {
+  const history = useHistory();
   const [offers, setOffers] = useState([])
   const [order, setOrderby] = useState("rate|asc")
   const [loading, setLoading] = useState(true)
@@ -44,6 +46,10 @@ function Offers() {
       });
   }, [order]);
 
+  function handleCredito(item) {
+    console.log("oferta contratada", item)
+  }
+
   return (
 
     <>
@@ -71,7 +77,7 @@ function Offers() {
                 rate={item.rate}
                 value={item.value}
                 maxInstallments={item.maxInstallments}
-
+                onClick={() => handleCredito(item)}
               />
             ))}
           </ul>
